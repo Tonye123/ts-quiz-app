@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { QuestionCard } from "./components/QuestionCard";
 import { fetchQuizQuestions, Difficulty, QuestionState } from "./API";
+import { Head } from "./components/Head";
+import { Button } from "./components/Button";
+import { Input } from "./components/Input";
+import { ReducerButton } from "./components/ReducerButton";
 
 type AnswerObject = {
 	question: string;
@@ -36,10 +40,18 @@ function App() {
 	const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {};
 
 	const nextQuestion = () => {};
-	console.log(questions);
 
 	return (
 		<div className="App">
+			<Head title="This is typescript" />
+			<Button
+				onClick={(e) => {
+					e.preventDefault();
+					console.log(e);
+				}}
+			/>
+			<Input />
+			<ReducerButton />
 			<h1>REACT QUIZ</h1>
 			<button className="start" onClick={startTrivia}>
 				start
