@@ -9,14 +9,14 @@ type Props = {
 	totalQuestions: number;
 };
 
-export const QuestionCard: React.FC<Props> = ({
+export const QuestionCard = ({
 	question,
 	answers,
 	callback,
 	userAnswer,
 	questionNr,
 	totalQuestions,
-}) => {
+}: Props) => {
 	return (
 		<div>
 			<p className="number">
